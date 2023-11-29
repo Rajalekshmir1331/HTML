@@ -1,0 +1,78 @@
+<html>
+<head>
+<script>
+function validate()
+{
+var name=document.forms["reg form"]["name"];
+var email=document.forms["reg form"]["email"];
+var phone=document.forms["reg form"]["telephone"];
+var what=document.forms["reg form"]["subject"];
+var password=document.forms["reg form"]["password"];
+var address=document.forms["reg form"]["address"];
+if(name.value=="")
+{
+window.alert("please enter your name");
+name.focus();
+return false;
+}
+if (address.value=="")
+{
+window.alert("please enter your address");
+address.focus();
+return false;
+}
+if (email.value=="")
+{
+window.alert("please enter your email");
+email.focus();
+return false;
+}
+if (phone.value=="")
+{
+window.alert("please enter your phone number");
+phone.focus();
+return false;
+}
+if (password.value=="")
+{
+window.alert("please enter your password");
+password.focus();
+return false;
+}
+if(what.selectedindex<1)
+{
+window.alert("please enter your course:");
+what.focus();
+return false;
+return false;
+}
+return true;
+}
+</script>
+<style>
+body
+{
+text-align:center;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align=center">Registration form</h1>
+<form name="regform" onsubmit="return validate()">
+<p>name<input type="text" size="65" name="Name"/></p><br/>
+<p>address<input type="text" size="65" name="Email"/> </p> <br/>
+<p>password<input type="text" size="65" name="Password"/> </p> <br/>
+<p>phone<input type="text" size="65" name="Telephone"/> </p> <br/>
+<p>select your course
+<select type="text" value="" name="subject">
+<option>BTECH</option><option>BCA</option><option>MCA</option><option>MTECH</option></select></p>
+<br/>
+<br/>
+<input type="submit" value="submit" nbame=submit"/>
+<input type="reset" value="reset" name="reset"/>
+<p>
+</form>
+</body>
+</html>
+
+
