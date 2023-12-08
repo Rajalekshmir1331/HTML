@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo for mouse over</title>
+    <script>
+        function preload() {
+            topon = new Image(100, 50);
+            topon.src ="sunset.jpg";
+            topoff = new Image(260, 280);
+            topoff.src = "sunrise.jpg";
+        }
+        
+        function Mymouseon(n) {
+            preload();
+            imageON = eval(n + "on.src");
+            document.images[n].src = imageON;
+        }
+        
+        function Mymouseoff(n) {
+            imageOFF = eval(n + "off.src");
+            document.images[n].src = imageOFF;
+        }
+    </script>
+</head>
+<body>
+    <h1>Demo for mouse over</h1>
+    <a href="#" onmouseout="Mymouseoff('top');" onmouseover="Mymouseon('top');">
+        <img src="sky.jpg" alt="show next" name="top">
+    </a>
+</body>
+</html>
+
